@@ -1,0 +1,167 @@
+.page {
+  min-height: 100vh;
+  background: #f5f6f8;
+}
+
+/* 搜索 + 分段吸顶：切 tab、滚动都不丢状态 */
+.head {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: #ffffff;
+  padding: 18rpx 24rpx 0;
+  box-shadow: 0 4rpx 16rpx rgba(15, 40, 90, 0.04);
+}
+
+.search {
+  height: 72rpx;
+  background: #f2f3f5;
+  border-radius: 36rpx;
+  display: flex;
+  align-items: center;
+  padding: 0 24rpx;
+}
+
+.search-icon {
+  font-size: 30rpx;
+  color: #9aa0a8;
+  margin-right: 12rpx;
+}
+
+.search-input {
+  flex: 1;
+  font-size: 26rpx;
+}
+
+.tabs {
+  display: flex;
+  margin-top: 12rpx;
+}
+
+.tab {
+  margin-right: 44rpx;
+  padding: 16rpx 0 14rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tab-label {
+  font-size: 28rpx;
+  color: #6b7280;
+}
+
+.tab.on .tab-label {
+  color: #0050d3;
+  font-weight: 600;
+}
+
+.tab-line {
+  margin-top: 8rpx;
+  width: 32rpx;
+  height: 6rpx;
+  border-radius: 3rpx;
+  background: #0050d3;
+}
+
+.list {
+  padding: 20rpx 24rpx;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  border-radius: 16rpx;
+  padding: 18rpx;
+  margin-bottom: 16rpx;
+}
+
+.row-cover {
+  width: 168rpx;
+  height: 112rpx;
+  border-radius: 10rpx;
+  flex-shrink: 0;
+}
+
+.row-body {
+  flex: 1;
+  margin-left: 20rpx;
+  overflow: hidden;
+}
+
+.row-tags {
+  display: flex;
+  margin-bottom: 6rpx;
+}
+
+.kind {
+  font-size: 20rpx;
+  line-height: 28rpx;
+  padding: 2rpx 10rpx;
+  border-radius: 6rpx;
+}
+
+.kind-course {
+  color: #0050d3;
+  background: #eef4ff;
+}
+
+.kind-material {
+  color: #0f7b5f;
+  background: #e8f7f1;
+}
+
+.kind-case {
+  color: #a2620a;
+  background: #fdf2e2;
+}
+
+.row-title {
+  display: block;
+  font-size: 28rpx;
+  font-weight: 600;
+  color: #1a1a1a;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.row-sub {
+  display: block;
+  margin-top: 6rpx;
+  font-size: 24rpx;
+  color: #8a8f99;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.row-arrow {
+  color: #c6cbd4;
+  font-size: 32rpx;
+  margin-left: 10rpx;
+}
+
+.empty {
+  padding-top: 160rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.empty-title {
+  font-size: 30rpx;
+  color: #4a4f57;
+}
+
+.empty-desc {
+  margin-top: 10rpx;
+  font-size: 24rpx;
+  color: #9aa0a8;
+}
+
+.tabbar-holder {
+  height: 170rpx;
+  padding-bottom: env(safe-area-inset-bottom);
+}

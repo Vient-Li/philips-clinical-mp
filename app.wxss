@@ -1,0 +1,35 @@
+page {
+  --brand: #0050D3;
+  --brand-deep: #0043b0;
+  --ink: #1a1a1a;
+  --muted: #8a8f99;
+  --line: #eceef1;
+  background: #ffffff;
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+view, text, image, scroll-view, swiper {
+  box-sizing: border-box;
+}
+
+/* 原生控件在两端默认外观不一致，这里统一掉，只用 class 控制样式 */
+button {
+  border: none;
+}
+
+button::after {
+  border: none;
+}
+
+input,
+textarea {
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+.press {
+  opacity: 0.72;
+}

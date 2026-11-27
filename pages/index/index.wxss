@@ -1,0 +1,333 @@
+.page {
+  background: #ffffff;
+  min-height: 100vh;
+}
+
+/* 自定义导航栏 */
+.topbar {
+  background: #ffffff;
+}
+
+.topbar-inner {
+  height: 88rpx;
+  padding: 0 27rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 150rpx;
+  height: 27rpx;
+}
+
+/* 右上角只留一个搜索位，其余让给系统胶囊 */
+.search-entry {
+  height: 60rpx;
+  padding: 0 20rpx;
+  background: #f2f3f5;
+  border-radius: 30rpx;
+  display: flex;
+  align-items: center;
+}
+
+.search-icon {
+  font-size: 28rpx;
+  color: #8a8f99;
+  margin-right: 8rpx;
+}
+
+.search-text {
+  font-size: 24rpx;
+  color: #8a8f99;
+}
+
+/* Banner */
+.banner {
+  width: 750rpx;
+  height: 417rpx;
+}
+
+.banner-img {
+  width: 750rpx;
+  height: 417rpx;
+  display: block;
+}
+
+/* 科室九宫格 */
+.dept-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 22rpx 20rpx 6rpx;
+}
+
+.dept-cell {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10rpx 0 18rpx;
+}
+
+.dept-icon {
+  width: 150rpx;
+  height: 144rpx;
+}
+
+.divider {
+  height: 2rpx;
+  background: #ececec;
+  margin: 10rpx 30rpx 18rpx;
+}
+
+/* 分类入口 */
+.cat-wrap {
+  display: flex;
+  justify-content: space-between;
+  padding: 16rpx 27rpx 30rpx;
+}
+
+.cat-item {
+  width: 162rpx;
+  height: 154rpx;
+}
+
+/* 区块标题 */
+.section-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.section-title {
+  font-size: 34rpx;
+  font-weight: 600;
+  color: #0050d0;
+  line-height: 48rpx;
+}
+
+.section-title.light {
+  color: #ffffff;
+}
+
+.section-more {
+  font-size: 24rpx;
+  color: #8a8f99;
+}
+
+.section-more.light {
+  color: rgba(255, 255, 255, 0.88);
+}
+
+/* 尾部转化区 */
+.footer {
+  margin: 10rpx 27rpx 30rpx;
+  padding: 30rpx 28rpx;
+  background: #f5f7fa;
+  border-radius: 18rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-title {
+  font-size: 30rpx;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.footer-desc {
+  margin-top: 8rpx;
+  font-size: 24rpx;
+  color: #8a8f99;
+}
+
+.footer-btns {
+  margin-top: 22rpx;
+  display: flex;
+}
+
+.footer-btn {
+  flex: 1;
+  margin: 0;
+  height: 76rpx;
+  line-height: 76rpx;
+  font-size: 26rpx;
+  border-radius: 38rpx;
+  padding: 0;
+}
+
+.footer-btn::after {
+  border: none;
+}
+
+.footer-btn.ghost {
+  color: #0050d3;
+  background: #ffffff;
+  border: 1rpx solid #cfe0ff;
+  margin-right: 16rpx;
+}
+
+.footer-btn.solid {
+  color: #ffffff;
+  background: #0050d3;
+}
+
+.tabbar-holder {
+  height: 160rpx;
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+/* 最新活动：蓝底横滑，白卡承内容 */
+.activity {
+  background: #0050d3;
+  padding: 26rpx 27rpx 40rpx;
+}
+
+.act-scroll {
+  margin-top: 18rpx;
+  white-space: nowrap;
+  display: flex;
+}
+
+.act-card {
+  display: inline-flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  width: 217rpx;
+  margin-right: 15rpx;
+  background: #ffffff;
+  border-radius: 14rpx;
+  overflow: hidden;
+  white-space: normal;
+}
+
+.act-card:last-child {
+  margin-right: 0;
+}
+
+.act-cover-wrap {
+  position: relative;
+  width: 217rpx;
+  height: 217rpx;
+}
+
+.act-cover {
+  width: 217rpx;
+  height: 217rpx;
+  display: block;
+}
+
+.act-badge {
+  position: absolute;
+  left: 10rpx;
+  top: 10rpx;
+  padding: 2rpx 10rpx;
+  font-size: 18rpx;
+  line-height: 26rpx;
+  color: #ffffff;
+  background: rgba(0, 0, 0, 0.45);
+  border-radius: 6rpx;
+}
+
+.act-body {
+  padding: 12rpx 14rpx 14rpx;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.act-title {
+  font-size: 24rpx;
+  font-weight: 600;
+  color: #1a1a1a;
+  line-height: 34rpx;
+  height: 68rpx;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.act-meta {
+  display: block;
+  margin-top: 6rpx;
+  font-size: 20rpx;
+  line-height: 28rpx;
+  color: #8a8f99;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.act-cta {
+  margin-top: 8rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.act-cta-text {
+  font-size: 22rpx;
+  font-weight: 600;
+  color: #0050d3;
+}
+
+.act-cta-arrow {
+  font-size: 24rpx;
+  line-height: 1;
+  color: #0050d3;
+}
+
+/* 系列课程：两列 */
+.courses {
+  background: #ffffff;
+  padding: 30rpx 27rpx 20rpx;
+}
+
+.course-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 18rpx;
+}
+
+.course-card {
+  width: 337rpx;
+  margin-bottom: 15rpx;
+  background: #ffffff;
+  border-radius: 14rpx;
+  overflow: hidden;
+  box-shadow: 0 6rpx 20rpx rgba(15, 40, 90, 0.08);
+}
+
+.course-cover {
+  width: 337rpx;
+  height: 219rpx;
+  display: block;
+}
+
+.course-body {
+  padding: 12rpx 14rpx 16rpx;
+}
+
+.course-title {
+  display: block;
+  font-size: 26rpx;
+  font-weight: 600;
+  color: #1a1a1a;
+  line-height: 36rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.course-sub {
+  display: block;
+  margin-top: 4rpx;
+  font-size: 22rpx;
+  color: #8a8f99;
+  line-height: 32rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

@@ -1,0 +1,47 @@
+<view class="page">
+  <view class="head">
+    <view class="title-row">
+      <text class="page-title">近期活动</text>
+      <text class="page-count">已报名 {{mineCount}} 场</text>
+    </view>
+    <view class="filters">
+      <view
+        class="chip {{filter === item.key ? 'on' : ''}}"
+        wx:for="{{filters}}"
+        wx:key="key"
+        data-key="{{item.key}}"
+        bindtap="onFilter"
+      >
+        <text class="chip-text">{{item.label}}</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="list" wx:if="{{list.length}}">
+    <view class="card" wx:for="{{list}}" wx:key="id">
+      <image class="card-cover" src="{{item.cover}}" mode="aspectFill" data-id="{{item.id}}" bindtap="onSignup" />
+      <view class="card-body">
+        <text class="card-title">{{item.title}}</text>
+        <view class="card-meta">
+          <text class="meta-time">{{item.time}}</text>
+          <text class="meta-city">{{item.city}}</text>
+        </view>
+        <view class="card-foot">
+          <text class="badge {{item.signed ? 'badge-mine' : ''}}">{{item.signed ? '已报名' : item.badge}}</text>
+          <button
+            class="signup-btn {{item.signed ? 'done' : ''}}"
+            data-id="{{item.id}}"
+            bindtap="onSignup"
+          >{{item.signed ? '查看报名' : item.cta}}</button>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="empty" wx:else>
+    <text class="empty-title">这里还没有活动</text>
+    <text class="empty-desc">换个筛选看看，或去「推荐」里找课程回放</text>
+  </view>
+
+  <view class="tabbar-holder"></view>
+</view>

@@ -1,0 +1,175 @@
+.page {
+  min-height: 100vh;
+  background: #f5f6f8;
+}
+
+.head {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: #ffffff;
+  padding: 24rpx 24rpx 18rpx;
+  box-shadow: 0 4rpx 16rpx rgba(15, 40, 90, 0.04);
+}
+
+.title-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.page-title {
+  font-size: 36rpx;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.page-count {
+  font-size: 22rpx;
+  color: #8a8f99;
+}
+
+.filters {
+  display: flex;
+  margin-top: 18rpx;
+}
+
+.chip {
+  margin-right: 16rpx;
+  padding: 10rpx 24rpx;
+  border-radius: 30rpx;
+  background: #f2f3f5;
+}
+
+.chip.on {
+  background: #eef4ff;
+}
+
+.chip-text {
+  font-size: 24rpx;
+  color: #6b7280;
+}
+
+.chip.on .chip-text {
+  color: #0050d3;
+  font-weight: 600;
+}
+
+.list {
+  padding: 20rpx 24rpx;
+}
+
+/* 横排：方形封面不被裁掉，标题和时间在同一屏里能扫完 */
+.card {
+  display: flex;
+  background: #ffffff;
+  border-radius: 18rpx;
+  padding: 18rpx;
+  margin-bottom: 18rpx;
+}
+
+.card-cover {
+  width: 224rpx;
+  height: 224rpx;
+  border-radius: 12rpx;
+  flex-shrink: 0;
+}
+
+.card-body {
+  flex: 1;
+  margin-left: 20rpx;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.card-title {
+  font-size: 28rpx;
+  font-weight: 600;
+  color: #1a1a1a;
+  line-height: 40rpx;
+  height: 80rpx;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.card-meta {
+  margin-top: 8rpx;
+  display: flex;
+  align-items: center;
+}
+
+.meta-time {
+  font-size: 22rpx;
+  color: #6b7280;
+}
+
+.meta-city {
+  margin-left: 12rpx;
+  font-size: 20rpx;
+  color: #0050d3;
+  background: #eef4ff;
+  border-radius: 6rpx;
+  padding: 2rpx 8rpx;
+}
+
+.card-foot {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.badge {
+  font-size: 20rpx;
+  color: #a2620a;
+  background: #fdf2e2;
+  border-radius: 6rpx;
+  padding: 4rpx 10rpx;
+}
+
+.badge-mine {
+  color: #0f7b5f;
+  background: #e8f7f1;
+}
+
+.signup-btn {
+  margin: 0;
+  height: 56rpx;
+  line-height: 56rpx;
+  padding: 0 24rpx;
+  font-size: 24rpx;
+  color: #ffffff;
+  background: #0050d3;
+  border-radius: 28rpx;
+}
+
+.signup-btn.done {
+  color: #0050d3;
+  background: #eef4ff;
+}
+
+.empty {
+  padding-top: 140rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.empty-title {
+  font-size: 30rpx;
+  color: #4a4f57;
+}
+
+.empty-desc {
+  margin-top: 10rpx;
+  font-size: 24rpx;
+  color: #9aa0a8;
+}
+
+.tabbar-holder {
+  height: 170rpx;
+  padding-bottom: env(safe-area-inset-bottom);
+}

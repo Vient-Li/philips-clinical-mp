@@ -1,0 +1,30 @@
+{
+  "description": "飞利浦临床门户 · 微信小程序父级页面",
+  "packOptions": {
+    "ignore": [],
+    "include": []
+  },
+  "setting": {
+    "urlCheck": false,
+    "es6": true,
+    "postcss": true,
+    "minified": true,
+    "newFeature": true,
+    "coverView": true,
+    "nodeModules": false,
+    "checkInvalidKey": true,
+    "checkSiteMap": true,
+    "minifyWXSS": true,
+    "minifyWXML": true,
+    "ignoreUploadUnusedFiles": true
+  },
+  "compileType": "miniprogram",
+  "libVersion": "3.5.7",
+  "appid": "touristappid",
+  "projectname": "philips-clinical-mp",
+  "condition": {},
+  "editorSetting": {
+    "tabIndent": "insertSpaces",
+    "tabSize": 2
+  }
+}

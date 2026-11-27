@@ -1,0 +1,68 @@
+<view class="page">
+  <view class="header">
+    <view class="avatar">医</view>
+    <view class="who">
+      <text class="name">{{userInfo ? userInfo.nickName : '微信用户'}}</text>
+      <text class="tip">微信登录已就绪 · 报名和领资料都不需要注册</text>
+    </view>
+  </view>
+
+  <!-- 身份：静默登录已经有了，只有手机号要一次主动授权 -->
+  <view class="section auth">
+    <view class="auth-row">
+      <view class="auth-text">
+        <text class="auth-title">{{phoneAuthed ? '手机号已授权' : '手机号未授权'}}</text>
+        <text class="auth-desc">{{phoneAuthed ? '报名时自动填充，不用再手输' : '报名时可用微信一键填写，不用手输'}}</text>
+      </view>
+      <button class="auth-btn" wx:if="{{!phoneAuthed}}" open-type="getPhoneNumber" bindgetphonenumber="onGetPhone">一键授权</button>
+      <text class="auth-done" wx:else>✓</text>
+    </view>
+  </view>
+
+  <view class="section">
+    <view class="section-head">
+      <text class="section-title">我的报名与领取</text>
+      <text class="section-count">{{leads.length}} 条</text>
+    </view>
+    <view class="lead" wx:for="{{leads}}" wx:key="createdAt">
+      <view class="lead-main">
+        <text class="lead-title">{{item.title}}</text>
+        <text class="lead-meta">{{item.name}} · {{item.hospital}} · {{item.dept}}</text>
+      </view>
+      <text class="lead-time">{{item.timeText}}</text>
+    </view>
+    <view class="empty" wx:if="{{!leads.length}}">
+      <text class="empty-text">还没有报名或领取记录</text>
+      <text class="empty-desc">在活动或课程详情页提交一次就会出现在这里</text>
+    </view>
+  </view>
+
+  <view class="section">
+    <view class="section-head">
+      <text class="section-title">服务</text>
+    </view>
+    <view class="cell" bindtap="onService">
+      <view class="cell-left">
+        <text class="cell-label">在线咨询</text>
+        <text class="cell-hint">微信客服，工作日 9:00–18:00</text>
+      </view>
+      <button class="cell-contact" open-type="contact">开始咨询</button>
+    </view>
+    <view class="cell" bindtap="onCall">
+      <view class="cell-left">
+        <text class="cell-label">服务热线</text>
+        <text class="cell-hint">400-000-0000</text>
+      </view>
+      <text class="cell-arrow">›</text>
+    </view>
+    <view class="cell" bindtap="onPrivacy">
+      <view class="cell-left">
+        <text class="cell-label">信息使用说明</text>
+        <text class="cell-hint">我们怎么用你的联系方式</text>
+      </view>
+      <text class="cell-arrow">›</text>
+    </view>
+  </view>
+
+  <view class="tabbar-holder"></view>
+</view>

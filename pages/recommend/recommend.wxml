@@ -1,0 +1,48 @@
+<view class="page">
+  <view class="head">
+    <view class="search">
+      <text class="search-icon">⌕</text>
+      <input
+        class="search-input"
+        placeholder="搜索课程、资料、案例"
+        value="{{keyword}}"
+        focus="{{focus}}"
+        bindinput="onSearch"
+        confirm-type="search"
+      />
+    </view>
+    <view class="tabs">
+      <view
+        class="tab {{type === item.key ? 'on' : ''}}"
+        wx:for="{{types}}"
+        wx:key="key"
+        data-key="{{item.key}}"
+        bindtap="onType"
+      >
+        <text class="tab-label">{{item.label}}</text>
+        <view class="tab-line" wx:if="{{type === item.key}}"></view>
+      </view>
+    </view>
+  </view>
+
+  <view class="list" wx:if="{{list.length}}">
+    <view class="row" wx:for="{{list}}" wx:key="id" hover-class="press" bindtap="onOpen" data-id="{{item.id}}">
+      <image class="row-cover" src="{{item.cover}}" mode="aspectFill" />
+      <view class="row-body">
+        <view class="row-tags">
+          <text class="kind kind-{{item.kind}}">{{item.kindLabel}}</text>
+        </view>
+        <text class="row-title">{{item.title}}</text>
+        <text class="row-sub">{{item.sub}}</text>
+      </view>
+      <text class="row-arrow">›</text>
+    </view>
+  </view>
+
+  <view class="empty" wx:else>
+    <text class="empty-title">没有匹配的内容</text>
+    <text class="empty-desc">换个关键词，或切到「全部」看看</text>
+  </view>
+
+  <view class="tabbar-holder"></view>
+</view>

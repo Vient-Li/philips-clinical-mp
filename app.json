@@ -1,0 +1,51 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/recommend/recommend",
+    "pages/activity/activity",
+    "pages/profile/profile"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#0050D3",
+    "navigationBarTitleText": "飞利浦临床门户",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#f5f6f7"
+  },
+  "tabBar": {
+    "custom": true,
+    "color": "rgba(255,255,255,0.62)",
+    "selectedColor": "#ffffff",
+    "backgroundColor": "#0050D3",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "assets/tab-home.png",
+        "selectedIconPath": "assets/tab-home.png"
+      },
+      {
+        "pagePath": "pages/recommend/recommend",
+        "text": "推荐",
+        "iconPath": "assets/tab-rec.png",
+        "selectedIconPath": "assets/tab-rec.png"
+      },
+      {
+        "pagePath": "pages/activity/activity",
+        "text": "活动",
+        "iconPath": "assets/tab-act.png",
+        "selectedIconPath": "assets/tab-act.png"
+      },
+      {
+        "pagePath": "pages/profile/profile",
+        "text": "我的",
+        "iconPath": "assets/tab-mine.png",
+        "selectedIconPath": "assets/tab-mine.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents"
+}
