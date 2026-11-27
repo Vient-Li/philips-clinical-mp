@@ -1,0 +1,102 @@
+.page {
+  min-height: 100vh;
+  background: #f5f6f8;
+}
+
+.search-wrap {
+  background: #ffffff;
+  padding: 20rpx 24rpx;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.search {
+  height: 72rpx;
+  background: #f2f3f5;
+  border-radius: 36rpx;
+  display: flex;
+  align-items: center;
+  padding: 0 24rpx;
+}
+
+.search-icon {
+  font-size: 30rpx;
+  color: #9aa0a8;
+  margin-right: 12rpx;
+}
+
+.search-input {
+  flex: 1;
+  font-size: 26rpx;
+}
+
+.list {
+  padding: 20rpx 24rpx;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  border-radius: 16rpx;
+  padding: 18rpx;
+  margin-bottom: 16rpx;
+}
+
+.row-cover {
+  width: 160rpx;
+  height: 104rpx;
+  border-radius: 10rpx;
+  flex-shrink: 0;
+}
+
+.row-body {
+  flex: 1;
+  margin-left: 20rpx;
+  overflow: hidden;
+}
+
+.row-title {
+  display: block;
+  font-size: 28rpx;
+  font-weight: 600;
+  color: #1a1a1a;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.row-sub {
+  display: block;
+  margin-top: 8rpx;
+  font-size: 24rpx;
+  color: #8a8f99;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.row-arrow {
+  color: #c6cbd4;
+  font-size: 32rpx;
+  margin-left: 10rpx;
+}
+
+.empty {
+  padding-top: 160rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.empty-title {
+  font-size: 30rpx;
+  color: #4a4f57;
+}
+
+.empty-desc {
+  margin-top: 10rpx;
+  font-size: 24rpx;
+  color: #9aa0a8;
+}

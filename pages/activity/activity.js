@@ -1,6 +1,5 @@
 const app = getApp()
 const data = require('../../utils/data.js')
-const nav = require('../../utils/nav.js')
 
 const FILTERS = [
   { key: 'all', label: '全部' },
@@ -46,6 +45,8 @@ Page({
   onSignup(e) {
     const item = data.activities.find((a) => a.id === e.currentTarget.dataset.id)
     if (!item) return
-    nav.openChild(`/pages/form/form?from=activity&title=${encodeURIComponent(item.title)}`)
+    wx.navigateTo({
+      url: `/pages/form/form?from=activity&title=${encodeURIComponent(item.title)}&time=${encodeURIComponent(item.time + ' · ' + item.city)}`
+    })
   }
 })

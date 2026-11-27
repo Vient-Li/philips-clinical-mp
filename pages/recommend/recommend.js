@@ -1,6 +1,5 @@
 const app = getApp()
 const data = require('../../utils/data.js')
-const nav = require('../../utils/nav.js')
 
 const TYPES = [
   { key: 'all', label: '全部' },
@@ -55,6 +54,6 @@ Page({
   },
 
   onOpen(e) {
-    nav.openChild(`/pages/detail/detail?id=${e.currentTarget.dataset.id}`)
+    wx.navigateTo({ url: `/pages/detail/detail?id=${e.currentTarget.dataset.id}` })
   }
 })

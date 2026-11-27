@@ -50,52 +50,14 @@
     />
   </view>
 
-  <!-- 最新活动：横滑 3 张，点进去进活动详情（子页面下一阶段接入） -->
-  <view class="activity">
-    <view class="section-head">
-      <text class="section-title light">最新活动</text>
-      <text class="section-more light" hover-class="press" bindtap="toActivity">全部活动 ›</text>
-    </view>
-    <scroll-view class="act-scroll" scroll-x enable-flex show-scrollbar="{{false}}">
-      <view class="act-card" wx:for="{{activities}}" wx:key="id">
-        <view class="act-cover-wrap">
-          <image
-            class="act-cover"
-            src="{{item.cover}}"
-            mode="aspectFill"
-            hover-class="press"
-            bindtap="onAct"
-            data-index="{{index}}"
-          />
-          <text class="act-badge">{{item.badge}}</text>
-        </view>
-        <view class="act-body">
-          <text class="act-title">{{item.title}}</text>
-          <text class="act-meta">{{item.short}}</text>
-          <view class="act-cta" hover-class="press" bindtap="onAct" data-index="{{index}}">
-            <text class="act-cta-text">{{item.cta}}</text>
-            <text class="act-cta-arrow">›</text>
-          </view>
-        </view>
-      </view>
-    </scroll-view>
-  </view>
-
-  <!-- 系列课程：两列 6 个 -->
+  <!-- 系列课程：保留课程入口；其他内容由底部导航承接 -->
   <view class="courses">
     <view class="section-head">
       <text class="section-title">系列课程</text>
-      <text class="section-more" hover-class="press" bindtap="toRecommend">全部课程 ›</text>
+      <text class="section-more course-more" hover-class="press" bindtap="toAllCourses">更多 ›</text>
     </view>
     <view class="course-grid">
-      <view
-        class="course-card"
-        wx:for="{{courses}}"
-        wx:key="id"
-        hover-class="press"
-        bindtap="onCourse"
-        data-id="{{item.id}}"
-      >
+      <view class="course-card" wx:for="{{courses}}" wx:key="id" hover-class="press" bindtap="onCourse" data-id="{{item.id}}">
         <image class="course-cover" src="{{item.cover}}" mode="aspectFill" />
         <view class="course-body">
           <text class="course-title">{{item.title}}</text>
@@ -105,7 +67,7 @@
     </view>
   </view>
 
-  <!-- 父页面尾部：留资表单下一阶段接入，这里先给客服入口 -->
+  <!-- 父页面尾部：具体课程、活动等内容由平台页面承载 -->
   <view class="footer">
     <text class="footer-title">需要方案或报价？</text>
     <text class="footer-desc">留个电话，临床团队一个工作日内联系你</text>

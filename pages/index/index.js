@@ -1,6 +1,5 @@
 const app = getApp()
 const data = require('../../utils/data.js')
-const nav = require('../../utils/nav.js')
 
 Page({
   data: {
@@ -10,7 +9,6 @@ Page({
     banners: data.banners,
     depts: data.depts,
     cats: data.cats,
-    activities: data.activities.slice(0, 3),
     courses: data.courses.slice(0, 6)
   },
 
@@ -37,47 +35,33 @@ Page({
   onBanner(e) {
     const item = data.banners[e.currentTarget.dataset.index]
     if (!item) return
-    // 指向某个 tab 的 banner 直接切过去，其余进子页面
-    if (item.path.indexOf('/pages/activity/') === 0) {
-      wx.switchTab({ url: '/pages/activity/activity' })
-      return
+    if (item.path.indexOf('/pages/index/') > -1) {
+      wx.switchTab({ url: item.path })
+    } else {
+      wx.navigateTo({ url: item.path })
     }
-    if (item.path.indexOf('/pages/index/') === 0) {
-      wx.switchTab({ url: '/pages/index/index' })
-      return
-    }
-    nav.openChild(item.path)
   },
 
   onDept(e) {
-    const { id } = e.currentTarget.dataset
+    const { id, name } = e.currentTarget.dataset
     if (id === 'all') {
       wx.switchTab({ url: '/pages/recommend/recommend' })
       return
     }
-    nav.openChild(`/pages/category/category?dept=${id}`)
+    wx.navigateTo({ url: `/pages/category/category?dept=${id}&title=${encodeURIComponent(name)}` })
   },
 
   onCat(e) {
-    nav.openChild(`/pages/category/category?cat=${e.currentTarget.dataset.id}`)
-  },
-
-  onAct(e) {
-    const item = this.data.activities[e.currentTarget.dataset.index]
-    if (!item) return
-    nav.openChild(`/pages/detail/detail?id=${item.id}`)
+    const { id, name } = e.currentTarget.dataset
+    wx.navigateTo({ url: `/pages/category/category?cat=${id}&title=${encodeURIComponent(name)}` })
   },
 
   onCourse(e) {
-    nav.openChild(`/pages/detail/detail?id=${e.currentTarget.dataset.id}`)
+    wx.navigateTo({ url: `/pages/detail/detail?id=${e.currentTarget.dataset.id}` })
   },
 
-  toActivity() {
-    wx.switchTab({ url: '/pages/activity/activity' })
-  },
-
-  toRecommend() {
-    wx.switchTab({ url: '/pages/recommend/recommend' })
+  toAllCourses() {
+    wx.navigateTo({ url: `/pages/category/category?title=${encodeURIComponent('系列课程')}` })
   },
 
   onContact() {

@@ -3,7 +3,10 @@
     "pages/index/index",
     "pages/recommend/recommend",
     "pages/activity/activity",
-    "pages/profile/profile"
+    "pages/profile/profile",
+    "pages/detail/detail",
+    "pages/form/form",
+    "pages/category/category"
   ],
   "window": {
     "backgroundTextStyle": "light",

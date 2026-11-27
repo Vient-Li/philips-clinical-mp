@@ -1,0 +1,46 @@
+<view class="page" wx:if="{{item}}">
+  <image class="cover" src="{{item.cover}}" mode="aspectFill" />
+
+  <view class="body">
+    <view class="tags">
+      <text class="tag kind">{{item.kindLabel}}</text>
+      <text class="tag" wx:for="{{badges}}" wx:key="*this">{{item}}</text>
+    </view>
+
+    <text class="title">{{item.title}}</text>
+    <text class="sub">{{item.sub}}</text>
+
+    <view class="facts">
+      <view class="fact" wx:for="{{facts}}" wx:key="label">
+        <text class="fact-label">{{item.label}}</text>
+        <text class="fact-value">{{item.value}}</text>
+      </view>
+    </view>
+
+    <view class="hr"></view>
+
+    <view class="block" wx:for="{{blocks}}" wx:key="title">
+      <text class="block-title">{{item.title}}</text>
+      <text class="block-text">{{item.text}}</text>
+    </view>
+
+    <view class="notice">
+      <text class="notice-text">提交信息仅用于本次活动与服务联系，不会用于其他用途。</text>
+    </view>
+  </view>
+
+  <!-- 底部常驻转化条：滚动不动，咨询和主行动都在拇指区 -->
+  <view class="bottom-bar">
+    <button class="bar-contact" open-type="contact" bindtap="onContact">
+      <text class="bar-contact-icon">◍</text>
+      <text class="bar-contact-text">咨询</text>
+    </button>
+    <button class="bar-cta {{signed ? 'done' : ''}}" bindtap="onCta">
+      {{signed ? '已提交，查看记录' : item.cta}}
+    </button>
+  </view>
+</view>
+
+<view class="empty" wx:else>
+  <text>内容不存在或已下线</text>
+</view>
